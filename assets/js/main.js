@@ -12,22 +12,20 @@
   }, { threshold: .12 });
   function observe() { document.querySelectorAll('.reveal:not(.in)').forEach(function (el) { io.observe(el); }); }
 
-  function card(p, cls) {
+  function card(p) {
     var a = document.createElement('article');
-    a.className = 'proj reveal ' + (cls || '');
-    a.innerHTML = '<img loading="lazy" src="' + p.images[p.cover].t + '" alt="' + p.title + '">' +
-      '<div class="cap"><div class="cat">' + p.category + '</div><h3>' + p.title + '</h3>' +
-      '<div class="cnt">' + p.images.length + ' bilder' + (p.place ? ' · ' + p.place : '') + '</div></div>';
+    a.className = 'pcard reveal';
+    a.innerHTML = '<div class="ph"><img loading="lazy" src="' + p.images[p.cover].t + '" alt="' + p.title + '">' +
+      '<span class="cnt">' + p.images.length + ' bilder</span></div>' +
+      '<div class="pc-t"><h3>' + p.title + '</h3><span class="tag">' + p.category + '</span></div>' +
+      '<p>' + (p.place ? p.place : 'Ale & Göteborgsregionen') + '</p>';
     a.addEventListener('click', function () { openLb(p, 0); });
     return a;
   }
 
   // Featured projects (start page)
   var feat = $('#featured');
-  if (feat) {
-    var layout = ['w8', 'w4', 'w4', 'w8', 'w6', 'w6'];
-    P.filter(function (p) { return p.featured; }).slice(0, 6).forEach(function (p, i) { feat.appendChild(card(p, layout[i])); });
-  }
+  if (feat) P.filter(function (p) { return p.featured; }).slice(0, 6).forEach(function (p) { feat.appendChild(card(p)); });
 
   // Project archive with filters
   var grid = $('#pgrid'), filt = $('#filters');
