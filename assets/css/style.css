@@ -55,7 +55,7 @@ nav.main a:hover,nav.main a.active{color:var(--brand)}
 
 /* Hero */
 .hero,.phead{position:relative;color:#fff;overflow:hidden;background:var(--navy)}
-.hero{min-height:640px;display:flex;align-items:center}
+.hero{min-height:calc(100vh - 114px);min-height:calc(100svh - 114px);display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .hero::after,.phead::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,20,.85) 0%,rgba(10,14,20,.55) 50%,rgba(10,14,20,.15) 100%)}
 .hero .wrap,.phead .wrap{position:relative;z-index:2;width:100%}
@@ -211,7 +211,6 @@ footer.site{background:var(--dark);color:#a5a9b0;padding:72px 0 28px;font-size:1
   .wrap{padding:0 16px}
   .topbar .tb-r{display:none}
   .hdr-cta .btn{display:none}
-  .hero{min-height:560px}
   .services,.pcards,.process,.fgrid,.fcols{grid-template-columns:1fr}
   .facts .wrap{grid-template-columns:1fr 1fr}
   .facts div{padding:18px 0;border-left:0}
