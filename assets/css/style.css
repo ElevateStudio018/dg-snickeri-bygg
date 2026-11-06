@@ -221,3 +221,27 @@ footer.site{background:var(--dark);color:#a5a9b0;padding:72px 0 28px;font-size:1
   .lb-nav{position:absolute;bottom:100px}
   .lb-nav.prev{left:20px}.lb-nav.next{right:20px}
 }
+
+/* Service pages */
+.phead .eyebrow a:hover{color:#fff}
+.svc-body{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:64px;align-items:start}
+.svc-body article h2{font-size:24px;margin:40px 0 12px}
+.svc-body article h2:first-child{margin-top:0}
+.svc-body article p{font-size:16px;color:#3f444b;max-width:680px}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:500;cursor:pointer}
+.faq details p{margin-top:10px;font-size:15px}
+aside{display:grid;gap:18px;position:sticky;top:100px}
+.aside-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.box{border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.box h3{font-size:16px;margin-bottom:12px}
+.box ul{padding-left:18px;color:#3f444b;font-size:14.5px}
+.box li{margin-bottom:6px}
+.bkr{display:flex;gap:14px;align-items:center}
+.bkr img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+.bkr b{display:block;font-size:14px;font-weight:600}.bkr span{font-size:13px;color:var(--muted)}
+.others{display:flex;flex-wrap:wrap;gap:8px}
+.others a{font-size:13px;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.others a:hover{border-color:var(--ink)}
+.phead .lead{max-width:640px}
+@media (max-width:1024px){.svc-body{grid-template-columns:1fr;gap:40px}aside{position:static}}

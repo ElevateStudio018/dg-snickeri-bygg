@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elevatestudio018.github.io/dg-snickeri-bygg/sitemap.xml
